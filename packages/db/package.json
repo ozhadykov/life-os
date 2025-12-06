@@ -1,0 +1,29 @@
+{
+  "name": "@life-os/db",
+  "version": "0.0.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "prisma": "^7.1.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,5 @@
+# envionment
+.env
+
+# generated stuff
+/generated/prisma
