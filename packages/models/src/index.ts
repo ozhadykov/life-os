@@ -1,0 +1,1 @@
+export const MY_APP_NAME = 'Life OS v1';

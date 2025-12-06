@@ -1,16 +1,28 @@
 {
-  "name": "models",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@life-os/models",
+  "version": "0.0.0",
+  "description": "Shared TypeScript models and Zod schemas",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+    "tsup": "^8.3.5",
+    "typescript": "^5.3.3"
   }
 }
