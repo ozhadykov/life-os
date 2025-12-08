@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - life-os
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - life-os
+volumes:
+  pgdata:
+
+networks:
+  life-os:
+    driver: bridge
